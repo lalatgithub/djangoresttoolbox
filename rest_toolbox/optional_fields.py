@@ -34,12 +34,12 @@ class OptionalFieldsMixin(object):
         assert has_owner_attr or not has_owner_fields, OWNER_FIELDS_NO_ATTR
 
     def get_fields(self):
-        fields = copy.deepcopy(super(OptionalFieldsMixin, self).get_fields())
+        fields = super(OptionalFieldsMixin, self).get_fields()
 
         for name, field in fields.items():
             if self.allow_field(name, field) and self.show_field(name, field):
                 continue
-            fields.pop(name)
+            del fields[name]
 
         return fields
 
