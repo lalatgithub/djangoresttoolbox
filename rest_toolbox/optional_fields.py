@@ -36,10 +36,10 @@ class OptionalFieldsMixin(object):
     def get_fields(self):
         fields = super(OptionalFieldsMixin, self).get_fields()
 
-        for name, field in fields.items():
+        for name, field in fields.copy().items():
             if self.allow_field(name, field) and self.show_field(name, field):
                 continue
-            del fields[name]
+            fields.pop(name)
 
         return fields
 
