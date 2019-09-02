@@ -16,6 +16,7 @@ class User(serializers.Serializer):
         optional_fields = ('profile',)
         write_only_fields = ('password',)
 """
+import copy
 from rest_framework.fields import get_attribute
 
 
@@ -33,7 +34,7 @@ class OptionalFieldsMixin(object):
         assert has_owner_attr or not has_owner_fields, OWNER_FIELDS_NO_ATTR
 
     def get_fields(self):
-        fields = super(OptionalFieldsMixin, self).get_fields().deepcopy()
+        fields = copy.deepcopy(super(OptionalFieldsMixin, self).get_fields())
 
         for name, field in fields.items():
             if self.allow_field(name, field) and self.show_field(name, field):
