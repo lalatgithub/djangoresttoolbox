@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: djangoresttoolbox
+Version: 0.0.4
+Summary: Extensions for Django Rest Framework.
+Home-page: http://
+Author: John Chadwick
+Author-email: john.chadwick@marketfy.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP
