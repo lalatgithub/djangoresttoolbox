@@ -1,4 +1,4 @@
-from django.utils import six
+import six
 from rest_framework.exceptions import ValidationError
 from rest_framework.fields import get_attribute, empty
 from rest_framework.serializers import BaseSerializer
